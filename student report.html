@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>rowspan & colspan</title>
+</head>
+<style>
+*{
+   margin: 0%;
+   padding: 0%;
+   box-sizing: border-box;
+   font-family: Arial, sans-serif;
+}
+  body{
+    background: linear-gradient(135deg, rgb(170, 194, 216));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vh;
+  }
+  .container{
+       width: 150px;
+       margin: 30px auto;
+     animation: fadeIn 1.5s ease;
+  }
+  h1{
+    text-align: center;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px black;
+  }
+  table{
+    width: 80%;
+    border-collapse: collapse;
+    background: #bfc9e4;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 3);
+    overflow: hidden;
+    border-radius: 10px;
+  }
+ th{
+    background:#96b2e1;
+    color: aliceblue;
+    padding: 15px;
+    font-size: 18px;
+ }
+ td{
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #000;
+    transition: 4s;
+ }
+ tr:nth-child(even){
+      background: #f2f2f2;
+ }
+ tr:hover{
+      background: #2c4b74;
+      transform: scale(1.01);
+ }
+ .footer{
+    background: #438393;
+    color:#438393;
+    font-weight: bold;
+ }
+ @keyframes fadeIn{
+   from{
+      opacity: 0;
+      transform: translateY(-40px);
+   }
+   to{
+      opacity: 1;
+      transform: translateY(0);
+   }
+
+   }
+</style>
+<body>
+    <div> 
+        <h1>Rowspan & Colspan</h1>
+        <table>
+            <tr>
+               <th rowspan="2">ID</th>
+                <th rowspan="2">NAME</th>
+                 <th colspan="3">MARKS</th>
+                 <th rowspan="2">GRADE</th>
+            </tr>
+            <tr>
+              <th>Maths</th>
+               <th>English</th>
+               <th>Computer</th>
+            </tr>
+            <tr>
+               <th>1</th>
+               <th>Ali</th>
+               <th>78</th>
+               <th>94</th>
+               <th>88</th>
+               <th>A+</th>
+            </tr> 
+            <tr>
+               <th>2</th>
+               <th>Ayesha</th>
+               <th>78</th>
+               <th>86</th>
+               <th>85</th>
+               <th>A</th>
+            </tr> 
+             <tr>
+               <th>3</th>
+               <th>Sara</th>
+               <th>68</th>
+               <th>77</th>
+               <th>88</th>
+               <th>B</th>
+            </tr> 
+            <tr>
+               <th>4</th>
+               <th>Hamza</th>
+               <th>55</th>
+               <th>65</th>
+               <th>72</th>
+               <th>C</th>
+            </tr> 
+             <tr>
+               <th>5</th>
+               <th>Usman</th>
+               <th>55</th>
+               <th>49</th>
+               <th>61</th>
+               <th>D</th>
+            </tr> 
+            <tr>
+           <td colspan="5" class="footer">
+            TOTAL STUDENTS
+           </td>
+           <TD class="footer">3</TD>
+        </tr>
+             </table>
+    </div>
+</body>
+</html>
